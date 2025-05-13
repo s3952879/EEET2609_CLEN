@@ -8,11 +8,27 @@
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
+</head>
+
 <body>
     <h1>ESP32 Web Server</h1>
-    <p>GPIO state: <strong> %STATE%</strong></p>
-    <p><a href="/on"><button class="button">ON</button></a></p>
-    <p><a href="/off"><button class="button button2">OFF</button></a></p>
+    <form action="#">
+    <p> please select state: </p>
+      <input type="radio" id="state1" name="sel_state">
+      <label for="state1"> state 1 </label> <br>
+      <input type="radio" id="state2" name="sel_state">
+      <label for="state2"> state 2 </label> <br>
+      <input type="radio" id="state3" name="sel_state">
+      <label for="state3"> state 3 </label> <br>
+      <input type="radio" id="state4" name="sel_state">
+      <label for="state4"> state 4 </label> <br>
+      <input type="radio" id="state5" name="sel_state">
+      <label for="state5"> state 5 </label> <br>
+    </form> 
+    <p>
+      <a href="#"><button class="button">RECORD</button></a>
+      <a href="#"><button class="button button2">TRANSMIT</button></a>
+    </p>
 </body>
 
 </html>
