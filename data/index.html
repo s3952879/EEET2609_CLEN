@@ -1,3 +1,12 @@
+<!--
+notes:
+have a input box where user can fill in desired num of states
+	- 64 states max
+
+assigning states to buttons
+(unreachable states could be accessed by other devices)
+-->
+
 <!DOCTYPE html>
 <html>
 
@@ -8,11 +17,9 @@
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
-</head>
-
 <body>
     <h1>ESP32 Web Server</h1>
-    <form action="#">
+    <form>
     <p> please select state: </p>
       <input type="radio" id="state1" name="sel_state">
       <label for="state1"> state 1 </label> <br>
@@ -24,11 +31,425 @@
       <label for="state4"> state 4 </label> <br>
       <input type="radio" id="state5" name="sel_state">
       <label for="state5"> state 5 </label> <br>
+      <input type="radio" id="state6" name="sel_state">
+      <label for="state6"> state 6 </label> <br>
+      <input type="radio" id="state7" name="sel_state">
+      <label for="state7"> state 7 </label> <br>
+      <input type="radio" id="state8" name="sel_state">
+      <label for="state8"> state 8 </label> <br>
+      <input type="radio" id="state9" name="sel_state">
+      <label for="state9"> state 9 </label> <br>
+      <input type="radio" id="state10" name="sel_state">
+      <label for="state10"> state 10 </label> <br>
+      <input type="radio" id="state11" name="sel_state">
+      <label for="state11"> state 11 </label> <br>
+      <input type="radio" id="state12" name="sel_state">
+      <label for="state12"> state 12 </label> <br>
+      <input type="radio" id="state13" name="sel_state">
+      <label for="state13"> state 13 </label> <br>
+      <input type="radio" id="state14" name="sel_state">
+      <label for="state14"> state 14 </label> <br>
+      <input type="radio" id="state15" name="sel_state">
+      <label for="state15"> state 15 </label> <br>
     </form> 
+    <br>
     <p>
       <a href="#"><button class="button">RECORD</button></a>
       <a href="#"><button class="button button2">TRANSMIT</button></a>
     </p>
+    <br>
+    <h2>customise trigger conditions:</h2>
+    <form class = "form-inline">
+        <label for="button">STATE 1</label>
+        <select name="button" id="button">
+          <option value="btn1">button 1</option>
+          <option value="btn2">button 2</option>
+          <option value="btn3">button 3</option>
+          <option value="btn4">button 4</option>
+          <option value="btn5">button 5</option>
+          <option value="btn6">button 6</option>
+          <option value="btn7">button 7</option>
+          <option value="btn8">button 8</option>
+          <option value="btn9">button 9</option>
+          <option value="btn10">button 10</option>
+          <option value="btn11">button 11</option>
+          <option value="btn12">button 12</option>
+          <option value="btn10">button 13</option>
+          <option value="btn11">button 14</option>
+          <option value="btn12">button 15</option>
+        </select>
+        <label for="OSC">OSC:</label>
+  		<input type="OSC" id="OSC" placeholder="Enter OSC trigger" name="OSC">
+  		<label for="RS-232">RS-232:</label>
+  		<input type="RS" id="RS" placeholder="Enter RS-232 trigger" name="RS">
+        <label for="sACN">sACN:</label>
+  		<input type="sACN" id="sACN" placeholder="Enter sACN trigger" name="sACN">
+    </form>
+    <form class = "form-inline">
+        <label for="button">STATE 2</label>
+        <select name="button" id="button">
+          <option value="btn1">button 1</option>
+          <option value="btn2">button 2</option>
+          <option value="btn3">button 3</option>
+          <option value="btn4">button 4</option>
+          <option value="btn5">button 5</option>
+          <option value="btn6">button 6</option>
+          <option value="btn7">button 7</option>
+          <option value="btn8">button 8</option>
+          <option value="btn9">button 9</option>
+          <option value="btn10">button 10</option>
+          <option value="btn11">button 11</option>
+          <option value="btn12">button 12</option>
+          <option value="btn10">button 13</option>
+          <option value="btn11">button 14</option>
+          <option value="btn12">button 15</option>
+        </select>
+        <label for="OSC">OSC:</label>
+  		<input type="OSC" id="OSC" placeholder="Enter OSC trigger" name="OSC">
+  		<label for="RS-232">RS-232:</label>
+  		<input type="RS" id="RS" placeholder="Enter RS-232 trigger" name="RS">
+        <label for="sACN">sACN:</label>
+  		<input type="sACN" id="sACN" placeholder="Enter sACN trigger" name="sACN">
+    </form>
+    <form class = "form-inline">
+        <label for="button">STATE 3</label>
+        <select name="button" id="button">
+          <option value="btn1">button 1</option>
+          <option value="btn2">button 2</option>
+          <option value="btn3">button 3</option>
+          <option value="btn4">button 4</option>
+          <option value="btn5">button 5</option>
+          <option value="btn6">button 6</option>
+          <option value="btn7">button 7</option>
+          <option value="btn8">button 8</option>
+          <option value="btn9">button 9</option>
+          <option value="btn10">button 10</option>
+          <option value="btn11">button 11</option>
+          <option value="btn12">button 12</option>
+          <option value="btn10">button 13</option>
+          <option value="btn11">button 14</option>
+          <option value="btn12">button 15</option>
+        </select>
+        <label for="OSC">OSC:</label>
+  		<input type="OSC" id="OSC" placeholder="Enter OSC trigger" name="OSC">
+  		<label for="RS-232">RS-232:</label>
+  		<input type="RS" id="RS" placeholder="Enter RS-232 trigger" name="RS">
+        <label for="sACN">sACN:</label>
+  		<input type="sACN" id="sACN" placeholder="Enter sACN trigger" name="sACN">
+    </form>
+    <form class = "form-inline">
+        <label for="button">STATE 4</label>
+        <select name="button" id="button">
+          <option value="btn1">button 1</option>
+          <option value="btn2">button 2</option>
+          <option value="btn3">button 3</option>
+          <option value="btn4">button 4</option>
+          <option value="btn5">button 5</option>
+          <option value="btn6">button 6</option>
+          <option value="btn7">button 7</option>
+          <option value="btn8">button 8</option>
+          <option value="btn9">button 9</option>
+          <option value="btn10">button 10</option>
+          <option value="btn11">button 11</option>
+          <option value="btn12">button 12</option>
+          <option value="btn10">button 13</option>
+          <option value="btn11">button 14</option>
+          <option value="btn12">button 15</option>
+        </select>
+        <label for="OSC">OSC:</label>
+  		<input type="OSC" id="OSC" placeholder="Enter OSC trigger" name="OSC">
+  		<label for="RS-232">RS-232:</label>
+  		<input type="RS" id="RS" placeholder="Enter RS-232 trigger" name="RS">
+        <label for="sACN">sACN:</label>
+  		<input type="sACN" id="sACN" placeholder="Enter sACN trigger" name="sACN">
+    </form>
+    <form class = "form-inline">
+        <label for="button">STATE 5</label>
+        <select name="button" id="button">
+          <option value="btn1">button 1</option>
+          <option value="btn2">button 2</option>
+          <option value="btn3">button 3</option>
+          <option value="btn4">button 4</option>
+          <option value="btn5">button 5</option>
+          <option value="btn6">button 6</option>
+          <option value="btn7">button 7</option>
+          <option value="btn8">button 8</option>
+          <option value="btn9">button 9</option>
+          <option value="btn10">button 10</option>
+          <option value="btn11">button 11</option>
+          <option value="btn12">button 12</option>
+          <option value="btn10">button 13</option>
+          <option value="btn11">button 14</option>
+          <option value="btn12">button 15</option>
+        </select>
+        <label for="OSC">OSC:</label>
+  		<input type="OSC" id="OSC" placeholder="Enter OSC trigger" name="OSC">
+  		<label for="RS-232">RS-232:</label>
+  		<input type="RS" id="RS" placeholder="Enter RS-232 trigger" name="RS">
+        <label for="sACN">sACN:</label>
+  		<input type="sACN" id="sACN" placeholder="Enter sACN trigger" name="sACN">
+    </form>
+    <form class = "form-inline">
+        <label for="button">STATE 6</label>
+        <select name="button" id="button">
+          <option value="btn1">button 1</option>
+          <option value="btn2">button 2</option>
+          <option value="btn3">button 3</option>
+          <option value="btn4">button 4</option>
+          <option value="btn5">button 5</option>
+          <option value="btn6">button 6</option>
+          <option value="btn7">button 7</option>
+          <option value="btn8">button 8</option>
+          <option value="btn9">button 9</option>
+          <option value="btn10">button 10</option>
+          <option value="btn11">button 11</option>
+          <option value="btn12">button 12</option>
+          <option value="btn10">button 13</option>
+          <option value="btn11">button 14</option>
+          <option value="btn12">button 15</option>
+        </select>
+        <label for="OSC">OSC:</label>
+  		<input type="OSC" id="OSC" placeholder="Enter OSC trigger" name="OSC">
+  		<label for="RS-232">RS-232:</label>
+  		<input type="RS" id="RS" placeholder="Enter RS-232 trigger" name="RS">
+        <label for="sACN">sACN:</label>
+  		<input type="sACN" id="sACN" placeholder="Enter sACN trigger" name="sACN">
+    </form>
+    <form class = "form-inline">
+        <label for="button">STATE 7</label>
+        <select name="button" id="button">
+          <option value="btn1">button 1</option>
+          <option value="btn2">button 2</option>
+          <option value="btn3">button 3</option>
+          <option value="btn4">button 4</option>
+          <option value="btn5">button 5</option>
+          <option value="btn6">button 6</option>
+          <option value="btn7">button 7</option>
+          <option value="btn8">button 8</option>
+          <option value="btn9">button 9</option>
+          <option value="btn10">button 10</option>
+          <option value="btn11">button 11</option>
+          <option value="btn12">button 12</option>
+          <option value="btn10">button 13</option>
+          <option value="btn11">button 14</option>
+          <option value="btn12">button 15</option>
+        </select>
+        <label for="OSC">OSC:</label>
+  		<input type="OSC" id="OSC" placeholder="Enter OSC trigger" name="OSC">
+  		<label for="RS-232">RS-232:</label>
+  		<input type="RS" id="RS" placeholder="Enter RS-232 trigger" name="RS">
+        <label for="sACN">sACN:</label>
+  		<input type="sACN" id="sACN" placeholder="Enter sACN trigger" name="sACN">
+    </form>
+    <form class = "form-inline">
+        <label for="button">STATE 8</label>
+        <select name="button" id="button">
+          <option value="btn1">button 1</option>
+          <option value="btn2">button 2</option>
+          <option value="btn3">button 3</option>
+          <option value="btn4">button 4</option>
+          <option value="btn5">button 5</option>
+          <option value="btn6">button 6</option>
+          <option value="btn7">button 7</option>
+          <option value="btn8">button 8</option>
+          <option value="btn9">button 9</option>
+          <option value="btn10">button 10</option>
+          <option value="btn11">button 11</option>
+          <option value="btn12">button 12</option>
+          <option value="btn10">button 13</option>
+          <option value="btn11">button 14</option>
+          <option value="btn12">button 15</option>
+        </select>
+        <label for="OSC">OSC:</label>
+  		<input type="OSC" id="OSC" placeholder="Enter OSC trigger" name="OSC">
+  		<label for="RS-232">RS-232:</label>
+  		<input type="RS" id="RS" placeholder="Enter RS-232 trigger" name="RS">
+        <label for="sACN">sACN:</label>
+  		<input type="sACN" id="sACN" placeholder="Enter sACN trigger" name="sACN">
+    </form>
+    <form class = "form-inline">
+        <label for="button">STATE 9</label>
+        <select name="button" id="button">
+          <option value="btn1">button 1</option>
+          <option value="btn2">button 2</option>
+          <option value="btn3">button 3</option>
+          <option value="btn4">button 4</option>
+          <option value="btn5">button 5</option>
+          <option value="btn6">button 6</option>
+          <option value="btn7">button 7</option>
+          <option value="btn8">button 8</option>
+          <option value="btn9">button 9</option>
+          <option value="btn10">button 10</option>
+          <option value="btn11">button 11</option>
+          <option value="btn12">button 12</option>
+          <option value="btn10">button 13</option>
+          <option value="btn11">button 14</option>
+          <option value="btn12">button 15</option>
+        </select>
+        <label for="OSC">OSC:</label>
+  		<input type="OSC" id="OSC" placeholder="Enter OSC trigger" name="OSC">
+  		<label for="RS-232">RS-232:</label>
+  		<input type="RS" id="RS" placeholder="Enter RS-232 trigger" name="RS">
+        <label for="sACN">sACN:</label>
+  		<input type="sACN" id="sACN" placeholder="Enter sACN trigger" name="sACN">
+    </form>
+    <form class = "form-inline">
+        <label for="button">STATE 10</label>
+        <select name="button" id="button">
+          <option value="btn1">button 1</option>
+          <option value="btn2">button 2</option>
+          <option value="btn3">button 3</option>
+          <option value="btn4">button 4</option>
+          <option value="btn5">button 5</option>
+          <option value="btn6">button 6</option>
+          <option value="btn7">button 7</option>
+          <option value="btn8">button 8</option>
+          <option value="btn9">button 9</option>
+          <option value="btn10">button 10</option>
+          <option value="btn11">button 11</option>
+          <option value="btn12">button 12</option>
+          <option value="btn10">button 13</option>
+          <option value="btn11">button 14</option>
+          <option value="btn12">button 15</option>
+        </select>
+        <label for="OSC">OSC:</label>
+  		<input type="OSC" id="OSC" placeholder="Enter OSC trigger" name="OSC">
+  		<label for="RS-232">RS-232:</label>
+  		<input type="RS" id="RS" placeholder="Enter RS-232 trigger" name="RS">
+        <label for="sACN">sACN:</label>
+  		<input type="sACN" id="sACN" placeholder="Enter sACN trigger" name="sACN">
+    </form>
+    <form class = "form-inline">
+        <label for="button">STATE 11</label>
+        <select name="button" id="button">
+          <option value="btn1">button 1</option>
+          <option value="btn2">button 2</option>
+          <option value="btn3">button 3</option>
+          <option value="btn4">button 4</option>
+          <option value="btn5">button 5</option>
+          <option value="btn6">button 6</option>
+          <option value="btn7">button 7</option>
+          <option value="btn8">button 8</option>
+          <option value="btn9">button 9</option>
+          <option value="btn10">button 10</option>
+          <option value="btn11">button 11</option>
+          <option value="btn12">button 12</option>
+          <option value="btn10">button 13</option>
+          <option value="btn11">button 14</option>
+          <option value="btn12">button 15</option>
+        </select>
+        <label for="OSC">OSC:</label>
+  		<input type="OSC" id="OSC" placeholder="Enter OSC trigger" name="OSC">
+  		<label for="RS-232">RS-232:</label>
+  		<input type="RS" id="RS" placeholder="Enter RS-232 trigger" name="RS">
+        <label for="sACN">sACN:</label>
+  		<input type="sACN" id="sACN" placeholder="Enter sACN trigger" name="sACN">
+    </form>
+    <form class = "form-inline">
+        <label for="button">STATE 12</label>
+        <select name="button" id="button">
+          <option value="btn1">button 1</option>
+          <option value="btn2">button 2</option>
+          <option value="btn3">button 3</option>
+          <option value="btn4">button 4</option>
+          <option value="btn5">button 5</option>
+          <option value="btn6">button 6</option>
+          <option value="btn7">button 7</option>
+          <option value="btn8">button 8</option>
+          <option value="btn9">button 9</option>
+          <option value="btn10">button 10</option>
+          <option value="btn11">button 11</option>
+          <option value="btn12">button 12</option>
+          <option value="btn10">button 13</option>
+          <option value="btn11">button 14</option>
+          <option value="btn12">button 15</option>
+        </select>
+        <label for="OSC">OSC:</label>
+  		<input type="OSC" id="OSC" placeholder="Enter OSC trigger" name="OSC">
+  		<label for="RS-232">RS-232:</label>
+  		<input type="RS" id="RS" placeholder="Enter RS-232 trigger" name="RS">
+        <label for="sACN">sACN:</label>
+  		<input type="sACN" id="sACN" placeholder="Enter sACN trigger" name="sACN">
+    </form>
+    <form class = "form-inline">
+        <label for="button">STATE 13</label>
+        <select name="button" id="button">
+          <option value="btn1">button 1</option>
+          <option value="btn2">button 2</option>
+          <option value="btn3">button 3</option>
+          <option value="btn4">button 4</option>
+          <option value="btn5">button 5</option>
+          <option value="btn6">button 6</option>
+          <option value="btn7">button 7</option>
+          <option value="btn8">button 8</option>
+          <option value="btn9">button 9</option>
+          <option value="btn10">button 10</option>
+          <option value="btn11">button 11</option>
+          <option value="btn12">button 12</option>
+          <option value="btn10">button 13</option>
+          <option value="btn11">button 14</option>
+          <option value="btn12">button 15</option>
+        </select>
+        <label for="OSC">OSC:</label>
+  		<input type="OSC" id="OSC" placeholder="Enter OSC trigger" name="OSC">
+  		<label for="RS-232">RS-232:</label>
+  		<input type="RS" id="RS" placeholder="Enter RS-232 trigger" name="RS">
+        <label for="sACN">sACN:</label>
+  		<input type="sACN" id="sACN" placeholder="Enter sACN trigger" name="sACN">
+    </form>
+    <form class = "form-inline">
+        <label for="button">STATE 14</label>
+        <select name="button" id="button">
+          <option value="btn1">button 1</option>
+          <option value="btn2">button 2</option>
+          <option value="btn3">button 3</option>
+          <option value="btn4">button 4</option>
+          <option value="btn5">button 5</option>
+          <option value="btn6">button 6</option>
+          <option value="btn7">button 7</option>
+          <option value="btn8">button 8</option>
+          <option value="btn9">button 9</option>
+          <option value="btn10">button 10</option>
+          <option value="btn11">button 11</option>
+          <option value="btn12">button 12</option>
+          <option value="btn10">button 13</option>
+          <option value="btn11">button 14</option>
+          <option value="btn12">button 15</option>
+        </select>
+        <label for="OSC">OSC:</label>
+  		<input type="OSC" id="OSC" placeholder="Enter OSC trigger" name="OSC">
+  		<label for="RS-232">RS-232:</label>
+  		<input type="RS" id="RS" placeholder="Enter RS-232 trigger" name="RS">
+        <label for="sACN">sACN:</label>
+  		<input type="sACN" id="sACN" placeholder="Enter sACN trigger" name="sACN">
+    </form>
+    <form class = "form-inline">
+        <label for="button">STATE 15</label>
+        <select name="button" id="button">
+          <option value="btn1">button 1</option>
+          <option value="btn2">button 2</option>
+          <option value="btn3">button 3</option>
+          <option value="btn4">button 4</option>
+          <option value="btn5">button 5</option>
+          <option value="btn6">button 6</option>
+          <option value="btn7">button 7</option>
+          <option value="btn8">button 8</option>
+          <option value="btn9">button 9</option>
+          <option value="btn10">button 10</option>
+          <option value="btn11">button 11</option>
+          <option value="btn12">button 12</option>
+          <option value="btn10">button 13</option>
+          <option value="btn11">button 14</option>
+          <option value="btn12">button 15</option>
+        </select>
+        <label for="OSC">OSC:</label>
+  		<input type="OSC" id="OSC" placeholder="Enter OSC trigger" name="OSC">
+  		<label for="RS-232">RS-232:</label>
+  		<input type="RS" id="RS" placeholder="Enter RS-232 trigger" name="RS">
+        <label for="sACN">sACN:</label>
+  		<input type="sACN" id="sACN" placeholder="Enter sACN trigger" name="sACN">
+    </form>
 </body>
 
 </html>
+
