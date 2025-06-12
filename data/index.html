@@ -21,6 +21,7 @@ assigning states to buttons
 <body>
     <h1>ESP32 Web Server</h1>
     <!-- State number selection and state selection -->
+     <h2>State Selection</h2>
     <label for="number-states-input">Number of desired states:</label>
     <input 
         type="number" 
@@ -46,9 +47,10 @@ assigning states to buttons
         <a href="#"><button class="button button2">TRANSMIT</button></a>
     </p>
     <br>
-    <h2>customise trigger conditions:</h2>
+    <h3>customise trigger conditions:</h3>
     <form class="form-inline">
         <label for="button">STATE 1</label>
+        <!-- START: Old code, to be replaced -->
         <select name="button" id="button">
             <option value="null">no button</option>
             <option value="btn1">button 1</option>
@@ -57,15 +59,6 @@ assigning states to buttons
             <option value="btn4">button 4</option>
             <option value="btn5">button 5</option>
             <option value="btn6">button 6</option>
-            <option value="btn7">button 7</option>
-            <option value="btn8">button 8</option>
-            <option value="btn9">button 9</option>
-            <option value="btn10">button 10</option>
-            <option value="btn11">button 11</option>
-            <option value="btn12">button 12</option>
-            <option value="btn10">button 13</option>
-            <option value="btn11">button 14</option>
-            <option value="btn12">button 15</option>
         </select>
         <label for="OSC">OSC:</label>
         <input type="OSC" id="OSC" placeholder="Enter OSC trigger" name="OSC">
@@ -73,7 +66,62 @@ assigning states to buttons
         <input type="RS" id="RS" placeholder="Enter RS-232 trigger" name="RS">
         <label for="sACN">sACN:</label>
         <input type="sACN" id="sACN" placeholder="Enter sACN trigger" name="sACN">
+        <!-- END: Old code, to be replaced -->
     </form>
+    <section>
+        <h2>Options</h2>
+        <label for="number-states-input">Static IP Address Entry:</label>
+        <input 
+            type="number" 
+            id="ip-31-24-input" 
+            name="ip-31-24-input" 
+            min="0" 
+            max="255">
+        <input 
+            type="number" 
+            id="ip-23-16-input" 
+            name="ip-23-16-input" 
+            min="0" 
+            max="255">
+        <input 
+            type="number" 
+            id="ip-15-8-input" 
+            name="ip-15-8-input" 
+            min="0" 
+            max="255">
+        <input 
+            type="number" 
+            id="ip-7-0-input" 
+            name="ip-7-0-input" 
+            min="0" 
+            max="255">
+        <br>
+        <label for="number-states-input">Sub-net mask:</label>
+        <input 
+            type="number" 
+            id="subnet-31-24-input" 
+            name="subnet-31-24-input" 
+            min="0" 
+            max="255">
+        <input 
+            type="number" 
+            id="subnet-23-16-input" 
+            name="subnet-23-16-input" 
+            min="0" 
+            max="255">
+        <input 
+            type="number" 
+            id="subnet-15-8-input" 
+            name="subnet-15-8-input" 
+            min="0" 
+            max="255">
+        <input 
+            type="number" 
+            id="subnet-7-0-input" 
+            name="subnet-7-0-input" 
+            min="0" 
+            max="255">
+    </section>
 </body>
 
 </html>

@@ -45,6 +45,7 @@ let numberStates = 0;
 
 document.getElementById("test").innerHTML;
 
+// If a value exists in the number input, add the number of states
 if (numStateInput.value) {
     while (numberStates < numStateInput.value) {
         ++numberStates;
@@ -56,9 +57,9 @@ if (numStateInput.value) {
     }
 }
 
-
-let onNumStateChange = () => {
-    // New amount of states is greater than original value
+// If the number of desired states is changed, add or subtract elements 
+function onNumStateChange ()  {
+    // New amount of states is greater than originally, add states to match
     if (numberStates > stateSelect.childElementCount) {
         while (numberStates > stateSelect.childElementCount) {
             let newState = document.createElement("option");
@@ -74,6 +75,7 @@ let onNumStateChange = () => {
             stateSelect.appendChild(newState);
         }
     }
+    // New amount of states is less than originally, subtract states to match
     else if (numberStates < stateSelect.childElementCount) {
         while (numberStates < stateSelect.childElementCount) {
             let lastState = document.getElementById(`state-${stateSelect.childElementCount}`);
